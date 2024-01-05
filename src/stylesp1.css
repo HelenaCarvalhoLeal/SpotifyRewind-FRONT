@@ -1,0 +1,50 @@
+/* Aplicar desfoque apenas às repetições da imagem de fundo */
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.background-image {
+  background-image: url('./img/Lirio.jpeg');
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  /* Alteramos a posição para 'relative' */
+}
+
+/* Aplicar desfoque às repetições da imagem de fundo */
+.background-image::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: inherit;
+  filter: blur(10px);
+  pointer-events: none;
+  z-index: -1;
+  /* Coloca este elemento abaixo do .background-image */
+}
+
+.round-button {
+  background-color: #3498db;
+  color: #ffff;
+  border: none;
+  border-radius: 50px;
+  padding: 1% 3%;
+  font-size: 18px;
+  cursor: pointer;
+  position: fixed;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+}

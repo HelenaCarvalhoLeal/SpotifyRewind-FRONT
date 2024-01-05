@@ -1,0 +1,17 @@
+body, html {
+    /* width: 100%; */
+}
+
+#root {
+    /* width: 100%; */
+}
+
+.App {
+    /* width: 100vw; */
+    /* height: 100vh; */
+}
+
+.App p {
+    /* word-break: break-all; */
+}
+

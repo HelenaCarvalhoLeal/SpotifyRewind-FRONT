@@ -1,0 +1,70 @@
+body,
+#root {
+  background-image: url('../img/Lirio.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.logo {
+  width: 50px;
+  cursor: pointer;
+}
+
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #000000;
+}
+
+.background-image {
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  /* height: 100%; fabricio*/
+  position: relative;
+}
+
+.round-button {
+  left: 50%;
+  background-color: #3498db;
+  color: #ffff;
+  border: none;
+  border-radius: 50px;
+  padding: 1% 3%;
+  font-size: 18px;
+  /* cursor: pointer; */
+  position: relative;
+  /* bottom: -7%; mudei o botao e coloquei mais para baixo */
+  transform: translateX(-50%);
+  box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+  animation: neon-glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes neon-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.8);
+  }
+
+  100% {
+    box-shadow: 0 0 20px rgba(52, 152, 219, 1), 0 0 30px rgba(52, 152, 219, 1);
+  }
+}
+
+.sub-main {
+  margin-top: 30px;
+  width: 70%;
+  /* background-color: white; */
+}
+
+/* .cards-pesquisa {
+  height: 50vh;
+  overflow: auto;
+  className='cards-pesquisa'
+} */
