@@ -11,7 +11,7 @@ export function User(dataUrl) {
     function home() {
         window.location.href = "/";
     }
-    axios.get("http://localhost:3000/callback", {
+    axios.get("http://35.198.38.38:3000/callback", {
         params: {
             code: dataUrl
         }
@@ -32,12 +32,13 @@ export function User(dataUrl) {
                 </div>`
             );
         });
-        topA(response.data.topArtistas, response.data.topMusicas);
+        topA(response.data.topArtistas, response.data.topMusicas); //repetições corrigidas
     });
     return (
         <div className="container" style={{ height: "inherit"}}>
 
             <header className="header">
+                {/* <a href=""><img src={logo} alt="Logo" className="logo" /></a> */}
                 <img src={logo} alt="Logo" className="logo" onClick={home}/>
             </header>
 

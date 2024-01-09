@@ -19,7 +19,7 @@ import { useState } from "react";
 
 export function Home() {
   async function login() {
-    var login = await axios.get("http://localhost:3000/login");
+    var login = await axios.get("http://35.198.38.38:3000/login");
     window.location.href = login.data;
   }
   const [searchInput, setSearchInput] = useState("");
@@ -28,7 +28,7 @@ export function Home() {
   // Search
   async function search() {
     if (searchInput !== '') {
-      axios.get("http://localhost:3000/search", {
+      axios.get("http://35.198.38.38:3000/search", {
         params: {
           searchInput: searchInput
         }
